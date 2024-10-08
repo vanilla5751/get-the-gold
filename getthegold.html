@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Get The Gold</title>
+    <link rel="icon" href="rps images/favicon.png" type="image/png">
+    <script type="text/javascript" src="getthegold.js"></script>
+    <link href="getthegold.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onLoad="start()">
+    <div class="flex-container">
+
+        <div class="flex-child magenta">
+          <canvas id="can"></canvas>
+        </div>
+        
+        <div class="flex-child green">
+            <h1><b>SHOP</b></h1>
+                <p id="dirt"> dirt: 0</p>
+                <p id="copper"> copper: 0</p>
+                <p id="silver"> silver: 0</p>
+                <p id="gold"> gold: 0</p>
+                <p id="diamond"> diamond: 0</p>
+                <p id="ruby"> ruby: 0</p>
+                <p id="emerald"> emerald: 0</p>
+                <p id="onyx"> onyx: 0</p>
+
+                <button onclick="buy(1)">ore multiplier</button>
+                <p id="buy1">cost:100 Dirt</p>
+
+                <button onclick="buy(2)">common ore multiplier</button>
+                <p id="buy2">cost:25 copper</p>
+
+                <button onclick="buy(3)">rare ore multiplier</button>
+                <p id="buy3">cost:25 silver</p>
+
+                <button onclick="buy(4)">ore base count</button>
+                <p id="buy4">cost:10 Gold</p>
+
+                <button onclick="buy(5)">reroll common chance</button>
+                <p id="buy5">cost:5 diamonds</p>
+
+                <button onclick="buy(6)">gold multiplier</button>
+                <p id="buy6">cost:5 ruby</p>
+
+                <button onclick="buy(7)">ore power</button>
+                <p id="buy7">cost:10 Emerald</p>
+
+                <button onclick="buy(8)">Dirt multiplier</button>
+                <p id="buy8">cost:1 Onyx</p>
+
+                <button onclick="reset()">reset data</button>
+        </div>
+        
+      </div>
+</body>
+
+</html>
