@@ -14,6 +14,7 @@
   <script type="text/javascript" src="js/setup.js"></script>
   <script type="text/javascript" src="js/mastery.js"></script>
   <script type="text/javascript" src="js/reset.js"></script>
+  <script type="text/javascript" src="js/rebirth.js"></script>
   <link href="getthegold.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -33,15 +34,6 @@
 
       <div id="shop" style="display: block;">
         <h1><b>SHOP</b></h1>
-        <p id="dirt"> dirt: 0</p>
-        <p id="copper"> copper: 0</p>
-        <p id="silver"> silver: 0</p>
-        <p id="gold"> gold: 0</p>
-        <p id="diamond"> diamond: 0</p>
-        <p id="ruby"> ruby: 0</p>
-        <p id="emerald"> emerald: 0</p>
-        <p id="onyx"> onyx: 0</p>
-
         <button onclick="buy(1)">ore multiplier</button>
         <p id="buy1">cost:100 Dirt</p>
 
@@ -66,52 +58,77 @@
         <button onclick="buy(8)">Dirt multiplier</button>
         <p id="buy8">cost:1 Onyx</p>
 
-        <button onclick="reset()">reset data</button>
+
       </div>
-      
+
       <div id="rebirth" style="display: none;">
         <h1><b>Rebirths</b></h1>
 
-        <button>rebirth</button>
+        <button onclick="rebirth()">rebirth</button>
         <p id="rb">cost:100 onyx</p>
         <p>1 rebith point every log10(onyx)</p>
+        <p>must have 100 onyx to reset</p>
       </div>
 
       <div id="mastery" style="display: none;">
         <h1><b>mastery</b></h1>
-
-        <button onclick="mastery(1)">dirt mastery</button>
         <p id="m1">cost:10000 Dirt</p>
-  
-        <button onclick="mastery(2)">copper mastery</button>
+        <button onclick="mastery(1)">dirt mastery</button>
+
         <p id="m2">cost:10000 copper</p>
-  
-        <button onclick="mastery(3)">silver mastery</button>
+        <button onclick="mastery(2)">copper mastery</button>
+
         <p id="m3">cost:10000 silver</p>
-  
-        <button onclick="mastery(4)">gold mastery</button>
+        <button onclick="mastery(3)">silver mastery</button>
+
         <p id="m4">cost:1000 Gold</p>
-  
-        <button onclick="mastery(5)">diamond mastery</button>
+        <button onclick="mastery(4)">gold mastery</button>
+
         <p id="m5">cost:1000 diamonds</p>
-  
-        <button onclick="mastery(6)">ruby mastery</button>
+        <button onclick="mastery(5)">diamond mastery</button>
+
         <p id="m6">cost:100 ruby</p>
-  
-        <button onclick="mastery(7)">emerald mastery</button>
+        <button onclick="mastery(6)">ruby mastery</button>
+
         <p id="m7">cost:100 Emerald</p>
-  
-        <button onclick="mastery(8)">onyx mastery</button>
+        <button onclick="mastery(7)">emerald mastery</button>
+
         <p id="m8">cost:10 Onyx</p>
-      </div>
-
-      <div id="settings">
+        <button onclick="mastery(8)">onyx mastery</button>
 
       </div>
 
-      <div id="inventory">
+      <div id="settings" style="display: none;">
 
-        
+        <button onclick="reset()">reset data</button>
+
+      </div>
+
+      <div id="inventory" style="display: none;">
+        <h1><b>INVENTORY</b></h1>
+        <p id="dirt"> dirt: 0</p>
+        <p id="copper"> copper: 0</p>
+        <p id="silver"> silver: 0</p>
+        <p id="gold"> gold: 0</p>
+        <p id="diamond"> diamond: 0</p>
+        <p id="ruby"> ruby: 0</p>
+        <p id="emerald"> emerald: 0</p>
+        <p id="onyx"> onyx: 0</p>
+        <br>
+        <h2>REBIRTH ORES</h2>
+        <p id="quartz"> quartz: 0</p>
+        <p id="titanium"> titanium: 0</p>
+        <p id="amythest"> amythest: 0</p>
+        <p id="sapphire"> sapphire: 0</p>
+        <p id="topaz"> topaz: 0</p>
+        <p id="peridot"> peridot: 0</p>
+        <p id="uranium"> uranium: 0</p>
+        <p id="plutonium"> plutonium: 0</p>
+        <p id="thorium"> thorium: 0</p>
+        <br>
+        <h2>RESET POINTS</h2>
+        <p id="rp"> rebirth points: 0</p>
+
       </div>
 
 

@@ -78,6 +78,9 @@ function canvasClicked() {
             onyx += (Math.pow(1+orebase,pow)) * oremulti * roremulti * onyxm
             document.getElementById("onyx").innerHTML = "onyx:" + onyx
             localStorage.setItem("onyx", onyx)
+            rebirthpp = Math.log10(onyx)
+            document.getElementById("rb").innerHTML = "rebirth for: " + rebirthpp + " rebirth points"
+            localStorage.setItem("rebirthpp", rebirthpp)
             break;
         default:
             let sum = 0

@@ -241,5 +241,17 @@ function getdata() {
         onyxmc = parseInt(localStorage.getItem("onyxmc"))
     }
 
+    if (localStorage.getItem("rebirthp") == null) {
+        localStorage.setItem("rebirthp", rebirthp)
+    } else {
+        rebirthp = parseInt(localStorage.getItem("rebirthp"))
+    }
+
+    if (localStorage.getItem("rebirthpp") == null) {
+        localStorage.setItem("rebirthpp", rebirthpp)
+    } else {
+        rebirthpp = parseInt(localStorage.getItem("rebirthpp"))
+    }
+
 
 }

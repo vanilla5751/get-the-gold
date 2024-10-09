@@ -103,6 +103,9 @@ function mastery(upg) {
                 localStorage.setItem("onyxmc", onyxmc)
                 document.getElementById("m8").innerHTML = "cost:onyx " + onyxmc
                 localStorage.setItem("onyx", onyx)
+                rebirthpp = Math.log10(onyx)
+                document.getElementById("rb").innerHTML = "rebirth for: " + rebirthpp + " rebirth points"
+                localStorage.setItem("rebirthpp", rebirthpp)
             }
             break;
 

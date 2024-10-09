@@ -38,12 +38,8 @@ var upg6 = 5
 var upg7 = 10
 var upg8 = 1
 //reset layers
-var rebirth
 var rebirthp
-var prestige
-var prestigep
-var sacrifice
-var sacrificep
+var rebirthpp
 //levels
 var level
 var exp
