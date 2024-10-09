@@ -672,14 +672,14 @@ function reset(){
     localStorage.setItem("emeraldm", 1)
     localStorage.setItem("onyxm", 1)
 
-    localStorage.setItem("dirtmc", 1)
-    localStorage.setItem("coppermc", 1)
-    localStorage.setItem("silvermc", 1)
-    localStorage.setItem("goldmc", 0)
-    localStorage.setItem("diamondmc", 0)
-    localStorage.setItem("rubymc", 1)
-    localStorage.setItem("emeraldmc", 1)
-    localStorage.setItem("onyxmc", 1)
+    localStorage.setItem("dirtmc", 10000)
+    localStorage.setItem("coppermc", 10000)
+    localStorage.setItem("silvermc", 10000)
+    localStorage.setItem("goldmc", 1000)
+    localStorage.setItem("diamondmc", 1000)
+    localStorage.setItem("rubymc", 100)
+    localStorage.setItem("emeraldmc", 100)
+    localStorage.setItem("onyxmc", 10)
 }
 
 
