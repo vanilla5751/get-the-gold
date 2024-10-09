@@ -1,105 +1,123 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Get The Gold</title>
-    <link rel="icon" href="rps images/favicon.png" type="image/png">
-    <script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/getthegold.js"></script>
-    <script type="text/javascript" src="js/data.js"></script>
-    <script type="text/javascript" src="js/mine.js"></script>
-    <script type="text/javascript" src="js/upgrade.js"></script>
-    <script type="text/javascript" src="js/setup.js"></script>
-    <script type="text/javascript" src="js/mastery.js"></script>
-    <script type="text/javascript" src="js/reset.js"></script>
-    <link href="getthegold.css" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8">
+  <title>Get The Gold</title>
+  <link rel="icon" href="rps images/favicon.png" type="image/png">
+  <script src="https://unpkg.com/htmx.org@2.0.3"
+    integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/getthegold.js"></script>
+  <script type="text/javascript" src="js/data.js"></script>
+  <script type="text/javascript" src="js/mine.js"></script>
+  <script type="text/javascript" src="js/upgrade.js"></script>
+  <script type="text/javascript" src="js/setup.js"></script>
+  <script type="text/javascript" src="js/mastery.js"></script>
+  <script type="text/javascript" src="js/reset.js"></script>
+  <link href="getthegold.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body onLoad="start()">
-    <div class="flex-container">
+  <div class="flex-container">
 
-        <div class="flex-child magenta">
-          <canvas id="can"></canvas>
-        </div>
-        
-        <div class="flex-child green">
-            <h1><b>SHOP</b></h1>
-                <p id="dirt"> dirt: 0</p>
-                <p id="copper"> copper: 0</p>
-                <p id="silver"> silver: 0</p>
-                <p id="gold"> gold: 0</p>
-                <p id="diamond"> diamond: 0</p>
-                <p id="ruby"> ruby: 0</p>
-                <p id="emerald"> emerald: 0</p>
-                <p id="onyx"> onyx: 0</p>
+    <div class="flex-child magenta">
+      <canvas id="can"></canvas>
+    </div>
 
-                <button onclick="buy(1)">ore multiplier</button>
-                <p id="buy1">cost:100 Dirt</p>
+    <div class="flex-child green">
+      <button onclick="swap(1)">SHOP</button>
+      <button onclick="swap(2)">INVENTORY</button>
+      <button onclick="swap(3)">REBIRTH</button>
+      <button onclick="swap(4)">MASTERY</button>
+      <button onclick="swap(5)">SETTINGS</button>
 
-                <button onclick="buy(2)">common ore multiplier</button>
-                <p id="buy2">cost:25 copper</p>
+      <div id="shop" style="display: block;">
+        <h1><b>SHOP</b></h1>
+        <p id="dirt"> dirt: 0</p>
+        <p id="copper"> copper: 0</p>
+        <p id="silver"> silver: 0</p>
+        <p id="gold"> gold: 0</p>
+        <p id="diamond"> diamond: 0</p>
+        <p id="ruby"> ruby: 0</p>
+        <p id="emerald"> emerald: 0</p>
+        <p id="onyx"> onyx: 0</p>
 
-                <button onclick="buy(3)">rare ore multiplier</button>
-                <p id="buy3">cost:25 silver</p>
+        <button onclick="buy(1)">ore multiplier</button>
+        <p id="buy1">cost:100 Dirt</p>
 
-                <button onclick="buy(4)">ore base count</button>
-                <p id="buy4">cost:10 Gold</p>
+        <button onclick="buy(2)">common ore multiplier</button>
+        <p id="buy2">cost:25 copper</p>
 
-                <button onclick="buy(5)">slower upgrade cost increase</button>
-                <p id="buy5">cost:5 diamonds</p>
+        <button onclick="buy(3)">rare ore multiplier</button>
+        <p id="buy3">cost:25 silver</p>
 
-                <button onclick="buy(6)">gold multiplier</button>
-                <p id="buy6">cost:5 ruby</p>
+        <button onclick="buy(4)">ore base count</button>
+        <p id="buy4">cost:10 Gold</p>
 
-                <button onclick="buy(7)">ore power</button>
-                <p id="buy7">cost:10 Emerald</p>
+        <button onclick="buy(5)">slower upgrade cost increase</button>
+        <p id="buy5">cost:5 diamonds</p>
 
-                <button onclick="buy(8)">Dirt multiplier</button>
-                <p id="buy8">cost:1 Onyx</p>
+        <button onclick="buy(6)">gold multiplier</button>
+        <p id="buy6">cost:5 ruby</p>
 
-                <button onclick="reset()">reset data</button>
-        </div>
+        <button onclick="buy(7)">ore power</button>
+        <p id="buy7">cost:10 Emerald</p>
+
+        <button onclick="buy(8)">Dirt multiplier</button>
+        <p id="buy8">cost:1 Onyx</p>
+
+        <button onclick="reset()">reset data</button>
       </div>
-      <div class="flex-container">
+      
+      <div id="rebirth" style="display: none;">
+        <h1><b>Rebirths</b></h1>
 
-        <div class="flex-child magenta">
-          <h1><b>Rebirths</b></h1>
-
-          <button>rebirth</button>
-          <p id="rb">cost:100 onyx</p>
-          <p>1 rebith point every log10(onyx)</p>
-        </div>
-        
-        <div class="flex-child green">
-            <h1><b>mastery</b></h1>
-
-            <button onclick="mastery(1)">dirt mastery</button>
-            <p id="m1">cost:10000 Dirt</p>
-
-            <button onclick="mastery(2)">copper mastery</button>
-            <p id="m2">cost:10000 copper</p>
-
-            <button onclick="mastery(3)">silver mastery</button>
-            <p id="m3">cost:10000 silver</p>
-
-            <button onclick="mastery(4)">gold mastery</button>
-            <p id="m4">cost:1000 Gold</p>
-
-            <button onclick="mastery(5)">diamond mastery</button>
-            <p id="m5">cost:1000 diamonds</p>
-
-            <button onclick="mastery(6)">ruby mastery</button>
-            <p id="m6">cost:100 ruby</p>
-
-            <button onclick="mastery(7)">emerald mastery</button>
-            <p id="m7">cost:100 Emerald</p>
-
-            <button onclick="mastery(8)">onyx mastery</button>
-            <p id="m8">cost:10 Onyx</p>
-
-
-        </div>
+        <button>rebirth</button>
+        <p id="rb">cost:100 onyx</p>
+        <p>1 rebith point every log10(onyx)</p>
       </div>
+
+      <div id="mastery" style="display: none;">
+        <h1><b>mastery</b></h1>
+
+        <button onclick="mastery(1)">dirt mastery</button>
+        <p id="m1">cost:10000 Dirt</p>
+  
+        <button onclick="mastery(2)">copper mastery</button>
+        <p id="m2">cost:10000 copper</p>
+  
+        <button onclick="mastery(3)">silver mastery</button>
+        <p id="m3">cost:10000 silver</p>
+  
+        <button onclick="mastery(4)">gold mastery</button>
+        <p id="m4">cost:1000 Gold</p>
+  
+        <button onclick="mastery(5)">diamond mastery</button>
+        <p id="m5">cost:1000 diamonds</p>
+  
+        <button onclick="mastery(6)">ruby mastery</button>
+        <p id="m6">cost:100 ruby</p>
+  
+        <button onclick="mastery(7)">emerald mastery</button>
+        <p id="m7">cost:100 Emerald</p>
+  
+        <button onclick="mastery(8)">onyx mastery</button>
+        <p id="m8">cost:10 Onyx</p>
+      </div>
+
+      <div id="settings">
+
+      </div>
+
+      <div id="inventory">
+
+        
+      </div>
+
+
+
+    </div>
+  </div>
 </body>
 
 </html>

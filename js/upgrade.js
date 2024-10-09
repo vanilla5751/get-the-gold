@@ -8,9 +8,9 @@ function buy(upg) {
                 oremulti += 1
                 localStorage.setItem("oremulti", oremulti)
                 upg1 *= 3
-                upg1 = Math.round(upg1/Math.log10(reroll))
+                upg1 = Math.round(upg1/Math.log10(reroll+1))
                 localStorage.setItem("upg1", upg1)
-                document.getElementById("buy1").innerHTML = "cost:" + upg1
+                document.getElementById("buy1").innerHTML = "cost:dirt " + upg1
                 localStorage.setItem("dirt", dirt)
             }
             break;
@@ -22,9 +22,9 @@ function buy(upg) {
                 coremulti += 1
                 localStorage.setItem("coremulti", coremulti)
                 upg2 *= 5
-                upg2 = Math.round(upg2/Math.log10(reroll))
+                upg2 = Math.round(upg2/Math.log10(reroll+1))
                 localStorage.setItem("upg2", upg2)
-                document.getElementById("buy2").innerHTML = "cost:" + upg2
+                document.getElementById("buy2").innerHTML = "cost:copper " + upg2
                 localStorage.setItem("copper", copper)
             }
             break;
@@ -36,9 +36,9 @@ function buy(upg) {
                 roremulti += 1
                 localStorage.setItem("roremulti", roremulti)
                 upg3 *= 5
-                upg3 = Math.round(upg3/Math.log10(reroll))
+                upg3 = Math.round(upg3/Math.log10(reroll+1))
                 localStorage.setItem("upg3", upg3)
-                document.getElementById("buy3").innerHTML = "cost:" + upg3
+                document.getElementById("buy3").innerHTML = "cost:silver " + upg3
                 localStorage.setItem("silver", silver)
             }
             break;
@@ -50,9 +50,9 @@ function buy(upg) {
                 orebase += 1
                 localStorage.setItem("orebase", orebase)
                 upg4 *= 5
-                upg4 = Math.round(upg4/Math.log10(reroll))
+                upg4 = Math.round(upg4/Math.log10(reroll+1))
                 localStorage.setItem("upg4", upg4)
-                document.getElementById("buy4").innerHTML = "cost:" + upg4
+                document.getElementById("buy4").innerHTML = "cost:gold " + upg4
                 localStorage.setItem("gold", gold)
             }
             break;
@@ -64,9 +64,9 @@ function buy(upg) {
                 reroll += 1
                 localStorage.setItem("reroll", reroll)
                 upg5 *= 5
-                upg5 = Math.round(upg5/Math.log10(reroll))
+                upg5 = Math.round(upg5/Math.log10(reroll+1))
                 localStorage.setItem("upg5", upg5)
-                document.getElementById("buy5").innerHTML = "cost:" + upg5
+                document.getElementById("buy5").innerHTML = "cost:diamond " + upg5
                 localStorage.setItem("diamond", diamond)
             }
             break;
@@ -78,9 +78,9 @@ function buy(upg) {
                 gmulti += 1
                 localStorage.setItem("gmulti", gmulti)
                 upg6 *= 5
-                upg6 = Math.round(upg6/Math.log10(reroll))
+                upg6 = Math.round(upg6/Math.log10(reroll+1))
                 localStorage.setItem("upg6", upg6)
-                document.getElementById("buy6").innerHTML = "cost:" + upg6
+                document.getElementById("buy6").innerHTML = "cost:ruby " + upg6
                 localStorage.setItem("ruby", ruby)
             }
             break;
@@ -93,9 +93,9 @@ function buy(upg) {
                 pow = Math.log2(orepow)
                 localStorage.setItem("orepow", orepow)
                 upg7 *= 10
-                upg7 = Math.round(upg7/Math.log10(reroll))
+                upg7 = Math.round(upg7/Math.log10(reroll +1)) 
                 localStorage.setItem("upg7", upg7)
-                document.getElementById("buy7").innerHTML = "cost:" + upg7
+                document.getElementById("buy7").innerHTML = "cost:emerald " + upg7
                 localStorage.setItem("emerald", emerald)
             }
             break;
@@ -107,9 +107,9 @@ function buy(upg) {
                 dmult += 1
                 localStorage.setItem("dmult", dmult)
                 upg8 *= 5
-                upg8 = Math.round(upg8/Math.log10(reroll))
+                upg8 = Math.round(upg8/Math.log10(reroll +1)) 
                 localStorage.setItem("upg8", upg8)
-                document.getElementById("buy8").innerHTML = "cost:" + upg8
+                document.getElementById("buy8").innerHTML = "cost:onyx " + upg8
                 localStorage.setItem("onyx", onyx)
             }
             break;

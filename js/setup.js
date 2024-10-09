@@ -1,19 +1,19 @@
 function text(){
 
-    document.getElementById("dirt").innerHTML = "dirt:" + dirt
-    document.getElementById("copper").innerHTML = "copper:" + copper
-    document.getElementById("silver").innerHTML = "silver:" + silver
-    document.getElementById("gold").innerHTML = "gold:" + gold
-    document.getElementById("diamond").innerHTML = "diamond:" + diamond
-    document.getElementById("ruby").innerHTML = "ruby:" + ruby
-    document.getElementById("emerald").innerHTML = "emerald:" + emerald
-    document.getElementById("onyx").innerHTML = "onyx:" + onyx
+    document.getElementById("dirt").innerHTML = "dirt: " + dirt
+    document.getElementById("copper").innerHTML = "copper: " + copper
+    document.getElementById("silver").innerHTML = "silver: " + silver
+    document.getElementById("gold").innerHTML = "gold: " + gold
+    document.getElementById("diamond").innerHTML = "diamond: " + diamond
+    document.getElementById("ruby").innerHTML = "ruby: " + ruby
+    document.getElementById("emerald").innerHTML = "emerald: " + emerald
+    document.getElementById("onyx").innerHTML = "onyx: " + onyx
 
     document.getElementById("buy1").innerHTML = "cost:dirt " + upg1
     document.getElementById("buy2").innerHTML = "cost:copper " + upg2
     document.getElementById("buy3").innerHTML = "cost:silver " + upg3
     document.getElementById("buy4").innerHTML = "cost:gold " + upg4
-    document.getElementById("buy5").innerHTML = "cost:diamond" + upg5
+    document.getElementById("buy5").innerHTML = "cost:diamond " + upg5
     document.getElementById("buy6").innerHTML = "cost:ruby " + upg6
     document.getElementById("buy7").innerHTML = "cost:emerald " + upg7
     document.getElementById("buy8").innerHTML = "cost:onyx " + upg8
@@ -51,3 +51,51 @@ function setGround() {//start of setGround
         }
     }
 }// end of setGround
+
+function swap(val){
+    switch (val){
+        case 1:
+            document.getElementById("shop").style.display='block'
+            document.getElementById("inventory").style.display='none'
+            document.getElementById("rebirth").style.display='none'
+            document.getElementById("mastery").style.display='none'
+            document.getElementById("settings").style.display='none'
+        break;
+        
+        case 2:
+            document.getElementById("shop").style.display='none'
+            document.getElementById("inventory").style.display='block'
+            document.getElementById("rebirth").style.display='none'
+            document.getElementById("mastery").style.display='none'
+            document.getElementById("settings").style.display='none'
+        break;
+
+        case 3:
+            document.getElementById("shop").style.display='none'
+            document.getElementById("inventory").style.display='none'
+            document.getElementById("rebirth").style.display='block'
+            document.getElementById("mastery").style.display='none'
+            document.getElementById("settings").style.display='none'
+        break;
+
+        case 4:
+            document.getElementById("shop").style.display='none'
+            document.getElementById("inventory").style.display='none'
+            document.getElementById("rebirth").style.display='none'
+            document.getElementById("mastery").style.display='block'
+            document.getElementById("settings").style.display='none'
+        break;
+
+        case 5:
+            document.getElementById("shop").style.display='none'
+            document.getElementById("inventory").style.display='none'
+            document.getElementById("rebirth").style.display='none'
+            document.getElementById("mastery").style.display='none'
+            document.getElementById("settings").style.display='block'
+        break;
+
+
+    }
+
+
+}

@@ -10,7 +10,7 @@ function mastery(upg) {
                 localStorage.setItem("dirtm", dirtm)
                 dirtmc *= 100
                 localStorage.setItem("dirtmc", dirtmc)
-                document.getElementById("m1").innerHTML = "cost:" + dirtmc
+                document.getElementById("m1").innerHTML = "cost:dirt " + dirtmc
                 localStorage.setItem("dirt", dirt)
             }
             break;
@@ -23,7 +23,7 @@ function mastery(upg) {
                 localStorage.setItem("copperm", copperm)
                 coppermc *= 100
                 localStorage.setItem("coppermc", coppermc)
-                document.getElementById("m2").innerHTML = "cost:" + coppermc
+                document.getElementById("m2").innerHTML = "cost:copper " + coppermc
                 localStorage.setItem("copper", copper)
             }
             break;
@@ -36,7 +36,7 @@ function mastery(upg) {
                 localStorage.setItem("silverm", silverm)
                 silvermc *= 100
                 localStorage.setItem("silvermc", silvermc)
-                document.getElementById("m3").innerHTML = "cost:" + silvermc
+                document.getElementById("m3").innerHTML = "cost:silver " + silvermc
                 localStorage.setItem("silver", silver)
             }
             break;
@@ -49,7 +49,7 @@ function mastery(upg) {
                 localStorage.setItem("goldm", goldm)
                 goldmc *= 1000
                 localStorage.setItem("goldmc", goldmc)
-                document.getElementById("m4").innerHTML = "cost:" + goldmc
+                document.getElementById("m4").innerHTML = "cost:gold " + goldmc
                 localStorage.setItem("gold", gold)
             }
             break;
@@ -62,7 +62,7 @@ function mastery(upg) {
                 localStorage.setItem("diamondm", diamondm)
                 diamondmc *= 1000
                 localStorage.setItem("diamondmc", diamondmc)
-                document.getElementById("m5").innerHTML = "cost:" + diamondmc
+                document.getElementById("m5").innerHTML = "cost:diamond " + diamondmc
                 localStorage.setItem("diamond", diamond)
             }
             break;
@@ -75,7 +75,7 @@ function mastery(upg) {
                 localStorage.setItem("rubym", rubym)
                 rubymc *= 1000
                 localStorage.setItem("rubymc", rubymc)
-                document.getElementById("m6").innerHTML = "cost:" + rubymc
+                document.getElementById("m6").innerHTML = "cost:ruby " + rubymc
                 localStorage.setItem("ruby", ruby)
             }
             break;
@@ -88,7 +88,7 @@ function mastery(upg) {
                 localStorage.setItem("emeraldm", emeraldm)
                 emeraldmc *= 1000
                 localStorage.setItem("emeraldmc", emeraldmc)
-                document.getElementById("m6").innerHTML = "cost:" + emeraldmc
+                document.getElementById("m6").innerHTML = "cost:emerald " + emeraldmc
                 localStorage.setItem("emerald", emerald)
             }
             break;
@@ -101,7 +101,7 @@ function mastery(upg) {
                 localStorage.setItem("onyxm", onyxm)
                 onyxmc *= 1000
                 localStorage.setItem("onyxmc", onyxmc)
-                document.getElementById("m8").innerHTML = "cost:" + onyxmc
+                document.getElementById("m8").innerHTML = "cost:onyx " + onyxmc
                 localStorage.setItem("onyx", onyx)
             }
             break;
