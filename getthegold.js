@@ -27,6 +27,45 @@ var upg5 = 5
 var upg6 = 5
 var upg7 = 10
 var upg8 = 1
+//reset layers
+var rebirth
+var rebirthp
+var prestige
+var prestigep
+var sacrifice
+var sacrificep
+//levels
+var level
+var exp
+var expr
+var levelp
+//mastery
+var dirtm = 1
+var copperm = 1 
+var silverm = 1
+var goldm = 1
+var diamondm = 1
+var rubym = 1
+var emeraldm = 1
+var onyxm = 1
+//mastery requirements
+var dirtmr = 10000
+var coppermr = 10000
+var silvermr = 10000
+var goldmr = 1000
+var diamondmr = 1000
+var rubymr = 100
+var emeraldmr = 100
+var onyxmr = 10
+//mastery cost
+var dirtmc = 100
+var coppermc = 100 
+var silvermc = 100
+var goldmc = 100
+var diamondmc = 100
+var rubymc = 100
+var emeraldmc = 100
+var onyxmc = 100
 //arrays and objects
 var ores = []
 var data = {}
@@ -170,12 +209,101 @@ if (localStorage.getItem("upg7") == null) {
     upg7 = parseInt(localStorage.getItem("upg7"))
 }
 
-if (localStorage.getItem("upg8") == null) {
-    localStorage.setItem("upg8", upg8)
+if (localStorage.getItem("dirtm") == null) {
+    localStorage.setItem("dirtm", dirtm)
 } else {
-    upg8 = parseInt(localStorage.getItem("upg8"))
+    dirtm = parseInt(localStorage.getItem("dirtm"))
 }
 
+if (localStorage.getItem("copperm") == null) {
+    localStorage.setItem("copperm", copperm)
+} else {
+    copperm = parseInt(localStorage.getItem("copperm"))
+}
+
+if (localStorage.getItem("silverm") == null) {
+    localStorage.setItem("silverm", silverm)
+} else {
+    silverm = parseInt(localStorage.getItem("silverm"))
+}
+
+if (localStorage.getItem("goldm") == null) {
+    localStorage.setItem("goldm", goldm)
+} else {
+    goldm = parseInt(localStorage.getItem("goldm"))
+}
+
+if (localStorage.getItem("diamondm") == null) {
+    localStorage.setItem("diamondm", diamondm)
+} else {
+    diamondm = parseInt(localStorage.getItem("diamondm"))
+}
+
+if (localStorage.getItem("rubym") == null) {
+    localStorage.setItem("rubym", rubym)
+} else {
+    rubym = parseInt(localStorage.getItem("rubym"))
+}
+
+if (localStorage.getItem("emeraldm") == null) {
+    localStorage.setItem("emeraldm", emeraldm)
+} else {
+    emeraldm = parseInt(localStorage.getItem("emeraldm"))
+}
+
+if (localStorage.getItem("onyxm") == null) {
+    localStorage.setItem("onyxm", onyxm)
+} else {
+    onyxm = parseInt(localStorage.getItem("onyxm"))
+}
+
+if (localStorage.getItem("dirtmc") == null) {
+    localStorage.setItem("dirtmc", dirtmc)
+} else {
+    dirtmc = parseInt(localStorage.getItem("dirtmc"))
+}
+
+if (localStorage.getItem("coppermc") == null) {
+    localStorage.setItem("coppermc", coppermc)
+} else {
+    coppermc = parseInt(localStorage.getItem("coppermc"))
+}
+
+if (localStorage.getItem("silvermc") == null) {
+    localStorage.setItem("silvermc", silvermc)
+} else {
+    silvermc = parseInt(localStorage.getItem("silvermc"))
+}
+
+if (localStorage.getItem("goldmc") == null) {
+    localStorage.setItem("goldmc", goldmc)
+} else {
+    goldmc = parseInt(localStorage.getItem("goldmc"))
+}
+
+if (localStorage.getItem("diamondmc") == null) {
+    localStorage.setItem("diamondmc", diamondmc)
+} else {
+    diamondmc = parseInt(localStorage.getItem("diamondmc"))
+}
+
+if (localStorage.getItem("rubymc") == null) {
+    localStorage.setItem("rubymc", rubymc)
+} else {
+    rubymc = parseInt(localStorage.getItem("rubymc"))
+}
+
+if (localStorage.getItem("emeraldmc") == null) {
+    localStorage.setItem("emeraldmc", emeraldmc)
+} else {
+    emeraldmc = parseInt(localStorage.getItem("emeraldmc"))
+}
+
+if (localStorage.getItem("onyxmc") == null) {
+    localStorage.setItem("onyxmc", onyxmc)
+} else {
+    onyxmc = parseInt(localStorage.getItem("onyxmc"))
+}
 
 //ground array
 var ground = new Array()
@@ -189,15 +317,15 @@ var ground = new Array()
     6 - ruby
     7 - emerald
     8 - onyx
-    10 - found empty
-    11 - found dirt
-    12 - found copper
-    13 - found silver
-    14 - found gold
-    15 - found diamond
-    16 - found ruby
-    17 - found emerald
-    18 - found onyx
+    100 - found empty
+    110 - found dirt
+    120 - found copper
+    130 - found silver
+    140 - found gold
+    150 - found diamond
+    160 - found ruby
+    170 - found emerald
+    180 - found onyx
     Feel free to add other options
 */
 
@@ -222,14 +350,23 @@ function start() {
     document.getElementById("emerald").innerHTML = "emerald:" + emerald
     document.getElementById("onyx").innerHTML = "onyx:" + onyx
 
-    document.getElementById("buy1").innerHTML = "cost:" + upg1
-    document.getElementById("buy2").innerHTML = "cost:" + upg2
-    document.getElementById("buy3").innerHTML = "cost:" + upg3
-    document.getElementById("buy4").innerHTML = "cost:" + upg4
-    document.getElementById("buy5").innerHTML = "cost:" + upg5
-    document.getElementById("buy6").innerHTML = "cost:" + upg6
-    document.getElementById("buy7").innerHTML = "cost:" + upg7
-    document.getElementById("buy8").innerHTML = "cost:" + upg8
+    document.getElementById("buy1").innerHTML = "cost:dirt " + upg1
+    document.getElementById("buy2").innerHTML = "cost:copper " + upg2
+    document.getElementById("buy3").innerHTML = "cost:silver " + upg3
+    document.getElementById("buy4").innerHTML = "cost:gold " + upg4
+    document.getElementById("buy5").innerHTML = "cost:diamond" + upg5
+    document.getElementById("buy6").innerHTML = "cost:ruby " + upg6
+    document.getElementById("buy7").innerHTML = "cost:emerald " + upg7
+    document.getElementById("buy8").innerHTML = "cost:onyx " + upg8
+
+    document.getElementById("m1").innerHTML = "cost:dirt " + dirtmc
+    document.getElementById("m2").innerHTML = "cost:copper " + coppermc
+    document.getElementById("m3").innerHTML = "cost:silver " + silvermc
+    document.getElementById("m4").innerHTML = "cost:gold " + goldmc
+    document.getElementById("m5").innerHTML = "cost:diamond" + diamondmc
+    document.getElementById("m6").innerHTML = "cost:ruby " + rubymc
+    document.getElementById("m7").innerHTML = "cost:emerald " + emeraldmc
+    document.getElementById("m8").innerHTML = "cost:onyx " + onyxmc
 
     for (i = 0; i < 10; i++) {
         for (u = 0; u < 10; u++) {
@@ -275,65 +412,65 @@ function canvasClicked() {
     switch (ground[row][column]) {
         case 1:
             console.log("you found dirt")
-            ground[row][column] = 11
+            ground[row][column] = 110
             found("#4f351f", row, column)
-            dirt += (Math.pow(1+orebase,orepow)) * oremulti * coremulti * dmult
+            dirt += (Math.pow(1+orebase,orepow)) * oremulti * coremulti * dmult * dirtm
             document.getElementById("dirt").innerHTML = "dirt:" + dirt
             localStorage.setItem("dirt", dirt)
             break;
         case 2:
             console.log("you found copper")
-            ground[row][column] = 12
+            ground[row][column] = 120
             found("#b77438", row, column)
-            copper += ((1 + orebase) ^ orepow) * oremulti * coremulti
+            copper += (Math.pow(1+orebase,orepow)) * oremulti * coremulti * copperm
             document.getElementById("copper").innerHTML = "copper:" + copper
             localStorage.setItem("copper", copper)
             break;
         case 3:
             console.log("you found silver")
-            ground[row][column] = 13
+            ground[row][column] = 130
             found("#a59b91", row, column)
-            silver += ((1 + orebase) ^ orepow) * oremulti * coremulti
+            silver += (Math.pow(1+orebase,orepow)) * oremulti * coremulti * silverm
             document.getElementById("silver").innerHTML = "silver:" + silver
             localStorage.setItem("silver", silver)
             break;
         case 4:
             console.log("you found gold")
-            ground[row][column] = 14
+            ground[row][column] = 140
             found("#937f0a", row, column)
-            gold += ((1 + orebase) ^ orepow) * oremulti * coremulti * gmulti
+            gold += (Math.pow(1+orebase,orepow)) * oremulti * coremulti * gmulti * goldm
             document.getElementById("gold").innerHTML = "gold:" + gold
             localStorage.setItem("gold", gold)
             break;
         case 5:
             console.log("you found diamond")
-            ground[row][column] = 15
+            ground[row][column] = 150
             found("#136d5d", row, column)
-            diamond += ((1 + orebase) ^ orepow) * oremulti * roremulti
+            diamond += (Math.pow(1+orebase,orepow)) * oremulti * roremulti * diamondm
             document.getElementById("diamond").innerHTML = "diamond:" + diamond
             localStorage.setItem("diamond", diamond)
             break;
         case 6:
             console.log("you found ruby")
-            ground[row][column] = 15
+            ground[row][column] = 160
             found("#E24517", row, column)
-            ruby += ((1 + orebase) ^ orepow) * oremulti * roremulti
+            ruby += (Math.pow(1+orebase,orepow)) * oremulti * roremulti * rubym
             document.getElementById("ruby").innerHTML = "ruby:" + ruby
             localStorage.setItem("ruby", ruby)
             break;
         case 7:
             console.log("you found emerald")
-            ground[row][column] = 15
+            ground[row][column] = 170
             found("#22E217", row, column)
-            emerald += ((1 + orebase) ^ orepow) * oremulti * roremulti
+            emerald += (Math.pow(1+orebase,orepow)) * oremulti * roremulti * emeraldm
             document.getElementById("emerald").innerHTML = "emerald:" + emerald
             localStorage.setItem("emerald", emerald)
             break;
         case 8:
             console.log("you found onyx")
-            ground[row][column] = 15
+            ground[row][column] = 180
             found("#171817", row, column)
-            onyx += ((1 + orebase) ^ orepow) * oremulti * roremulti
+            onyx += (Math.pow(1+orebase,orepow)) * oremulti * roremulti * onyxm
             document.getElementById("onyx").innerHTML = "onyx:" + onyx
             localStorage.setItem("onyx", onyx)
             break;
@@ -341,7 +478,7 @@ function canvasClicked() {
             let sum = 0
             for (i = 0; i < 10; i++) {
                 for (u = 0; u < 10; u++) {
-                    if (ground[i][u] > 8) {
+                    if (ground[i][u] > 99) {
                         sum += 1
                     }
                 }
@@ -525,4 +662,134 @@ function reset(){
     localStorage.setItem("gmulti", 1)
     localStorage.setItem("orepow", 1)
     localStorage.setItem("dmult", 1)
+
+    localStorage.setItem("dirtm", 1)
+    localStorage.setItem("copperm", 1)
+    localStorage.setItem("silverm", 1)
+    localStorage.setItem("goldm", 0)
+    localStorage.setItem("diamondm", 0)
+    localStorage.setItem("rubym", 1)
+    localStorage.setItem("emeraldm", 1)
+    localStorage.setItem("onyxm", 1)
+
+    localStorage.setItem("dirtmc", 1)
+    localStorage.setItem("coppermc", 1)
+    localStorage.setItem("silvermc", 1)
+    localStorage.setItem("goldmc", 0)
+    localStorage.setItem("diamondmc", 0)
+    localStorage.setItem("rubymc", 1)
+    localStorage.setItem("emeraldmc", 1)
+    localStorage.setItem("onyxmc", 1)
+}
+
+
+function mastery(upg) {
+
+    switch (upg) {
+        case 1:
+            if (dirt >= dirtmc) {
+                dirt -= dirtmc
+                document.getElementById("dirt").innerHTML = "dirt:" + dirt
+                dirtm += 1
+                localStorage.setItem("dirtm", dirtm)
+                dirtmc *= 100
+                localStorage.setItem("dirtmc", dirtmc)
+                document.getElementById("m1").innerHTML = "cost:" + dirtmc
+                localStorage.setItem("dirt", dirt)
+            }
+            break;
+
+        case 2:
+            if (copper >= coppermc) {
+                copper -= coppermc
+                document.getElementById("copper").innerHTML = "copper:" + copper
+                copperm += 1
+                localStorage.setItem("copperm", copperm)
+                coppermc *= 100
+                localStorage.setItem("coppermc", coppermc)
+                document.getElementById("m2").innerHTML = "cost:" + coppermc
+                localStorage.setItem("copper", copper)
+            }
+            break;
+
+        case 3:
+            if (silver >= silvermc) {
+                silver -= silvermc
+                document.getElementById("silver").innerHTML = "silver:" + silver
+                silverm += 1
+                localStorage.setItem("silverm", silverm)
+                silvermc *= 100
+                localStorage.setItem("silvermc", silvermc)
+                document.getElementById("m3").innerHTML = "cost:" + silvermc
+                localStorage.setItem("silver", silver)
+            }
+            break;
+
+        case 4:
+            if (gold >= goldmc) {
+                gold -= goldmc
+                document.getElementById("gold").innerHTML = "gold:" + gold
+                goldm += 1
+                localStorage.setItem("goldm", goldm)
+                goldmc *= 1000
+                localStorage.setItem("goldmc", goldmc)
+                document.getElementById("m4").innerHTML = "cost:" + goldmc
+                localStorage.setItem("gold", gold)
+            }
+            break;
+
+        case 5:
+            if (diamond >= diamondmc) {
+                diamond -= diamondmc
+                document.getElementById("diamond").innerHTML = "diamond:" + diamond
+                diamondm += 1
+                localStorage.setItem("diamondm", diamondm)
+                diamondmc *= 1000
+                localStorage.setItem("diamondmc", diamondmc)
+                document.getElementById("m5").innerHTML = "cost:" + diamondmc
+                localStorage.setItem("diamond", diamond)
+            }
+            break;
+
+        case 6:
+            if (ruby >= rubymc) {
+                ruby -= rubymc
+                document.getElementById("ruby").innerHTML = "ruby:" + ruby
+                rubym += 1
+                localStorage.setItem("rubym", rubym)
+                rubymc *= 1000
+                localStorage.setItem("rubymc", rubymc)
+                document.getElementById("m6").innerHTML = "cost:" + rubymc
+                localStorage.setItem("ruby", ruby)
+            }
+            break;
+
+        case 7:
+            if (emerald >= emeraldmc) {
+                emerald -= emeraldmc
+                document.getElementById("emerald").innerHTML = "emerald:" + emerald
+                emeraldm += 1
+                localStorage.setItem("emeraldm", emeraldm)
+                emeraldmc *= 1000
+                localStorage.setItem("emeraldmc", emeraldmc)
+                document.getElementById("m6").innerHTML = "cost:" + emeraldmc
+                localStorage.setItem("emerald", emerald)
+            }
+            break;
+
+        case 8:
+            if (onyx >= onyxmc) {
+                onyx -= onyxmc
+                document.getElementById("onyx").innerHTML = "onyx:" + onyx
+                onyxm += 1
+                localStorage.setItem("onyxm", onyxm)
+                onyxmc *= 1000
+                localStorage.setItem("onyxmc", onyxmc)
+                document.getElementById("m8").innerHTML = "cost:" + onyxmc
+                localStorage.setItem("onyx", onyx)
+            }
+            break;
+
+    }
+
 }
