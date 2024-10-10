@@ -1,6 +1,8 @@
 var canvas
 var ctx
 var ran
+var column
+var row
 //ores
 var dirt = 0
 var copper = 0
@@ -38,9 +40,21 @@ var upg5 = 5
 var upg6 = 5
 var upg7 = 10
 var upg8 = 1
-//reset layers
-var rebirthp
-var rebirthpp
+//rebirths
+var rebirthp = 0
+var rebirthpp = 0
+
+var oremulti2 = 1
+var newores = 0
+var unlocks = 0
+var auto = 0
+var adjacent = 0
+
+var rbc1 = 1
+var rbc2 = 10
+var rbc3 = 1000
+var rbc4 = 10
+var rbc5 = 100
 //levels
 var level
 var exp

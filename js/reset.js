@@ -47,6 +47,18 @@ function reset(){
     localStorage.setItem("rebirthp", 0)
     localStorage.setItem("rebirthpp", 0)
 
+    localStorage.setItem("oremulti2", 1)
+    localStorage.setItem("newores", 0)
+    localStorage.setItem("unlocks", 0)
+    localStorage.setItem("auto", 0)
+    localStorage.setItem("adjacent", 0)
+
+    localStorage.setItem("rbc1", 1)
+    localStorage.setItem("rbc2", 10)
+    localStorage.setItem("rbc3", 1000)
+    localStorage.setItem("rbc4", 10)
+    localStorage.setItem("rbc5", 100)
+
     document.getElementById("dirt").innerHTML = "dirt: " + dirt
     document.getElementById("copper").innerHTML = "copper: " + copper
     document.getElementById("silver").innerHTML = "silver: " + silver

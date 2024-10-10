@@ -1,20 +1,6 @@
-function canvasClicked() {
+function adjacent(x, y) {
 
-    var clickX = event.x;
-    var clickY = event.y;
-
-    clickX -= canvas.offsetLeft;
-    clickY -= canvas.offsetTop;
-
-    clickX += window.pageXOffset
-    clickY += window.pageYOffset;
-
-
-
-    row = Math.floor(clickX / 100)
-    column = Math.floor(clickY / 100)
-
-    switch (ground[row][column]) {
+    switch (ground[row + x][column + y]) {
         case 1:
             console.log("you found dirt")
             ground[row][column] = 110
@@ -22,23 +8,6 @@ function canvasClicked() {
             dirt += (Math.pow(1 + orebase, pow)) * oremulti * coremulti * dmult * dirtm * oremulti2
             document.getElementById("dirt").innerHTML = "dirt:" + dirt
             localStorage.setItem("dirt", dirt)
-
-            if (adjacent < 1) {
-                bound = Math.round(1000 / adjacent) + 1
-                if (Math.round((Math.random() * bound)) == 1) {
-                    adjacent(1, 0)
-                }
-                if (Math.round((Math.random() * bound)) == 1) {
-                    adjacent(-1, 0)
-                }
-                if (Math.round((Math.random() * bound)) == 1) {
-                    adjacent(0, 1)
-                }
-                if (Math.round((Math.random() * bound)) == 1) {
-
-                }
-            }
-
             break;
         case 2:
             console.log("you found copper")
@@ -115,19 +84,4 @@ function canvasClicked() {
 
     }
 
-
-
-
-
 }
-
-function found(color, row, column) {
-    ctx.beginPath()
-    ctx.rect(row * 100, column * 100, 100, 100);
-    ctx.fillStyle = color;
-    ctx.fill();
-    ctx.fillStyle = "#191c0b";
-    ctx.stroke();
-    ctx.closePath()
-}
-

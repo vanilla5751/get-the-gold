@@ -117,3 +117,76 @@ function buy(upg) {
     }
 
 }
+
+function rbuy(upg){
+
+    switch(upg){
+
+        case 1:
+            if(rebirthp>rbc1){
+                rebirthp -= rbc1
+                localStorage.setItem("rebirthp", rebirthp)
+                rbc1 *= 2
+                localStorage.setItem("rbc1", rbc1)
+                oremulti2 += 1
+                localStorage.setItem("oremulti2", oremulti2)
+                document.getElementById("rp").innerHTML = "rebirth points: " + rebirthp
+                document.getElementById("rbuy1").innerHTML = "cost:rebirth points  " + rbc1
+            }
+        break;
+
+        case 2:
+            if(rebirthp>rbc2){
+                rebirthp -= rbc2
+                localStorage.setItem("rebirthp", rebirthp)
+                rbc2 *= 10
+                localStorage.setItem("rbc2", rbc2)
+                newores += 1
+                localStorage.setItem("newores", newores)
+                document.getElementById("rp").innerHTML = "rebirth points: " + rebirthp
+                document.getElementById("rbuy2").innerHTML = "cost:rebirth points  " + rbc2
+            }
+        break;
+
+        case 3:
+            if(rebirthp>rbc3){
+                rebirthp -= rbc3
+                localStorage.setItem("rebirthp", rebirthp)
+                rbc3 *= 10
+                localStorage.setItem("rbc3", rbc3)
+                unlocks += 1
+                localStorage.setItem("unlocks", unlocks)
+                document.getElementById("rp").innerHTML = "rebirth points: " + rebirthp
+                document.getElementById("rbuy3").innerHTML = "cost:rebirth points  " + rbc3
+            }
+        break;
+
+        case 4:
+            if(rebirthp>rbc4){
+                rebirthp -= rbc4
+                localStorage.setItem("rebirthp", rebirthp)
+                rbc4 *= 10
+                localStorage.setItem("rbc4", rbc4)
+                auto += 1
+                localStorage.setItem("auto", auto)
+                document.getElementById("rp").innerHTML = "rebirth points: " + rebirthp
+                document.getElementById("rbuy4").innerHTML = "cost:rebirth points  " + rbc4
+            }
+        break;
+
+        case 5:
+            if(rebirthp>rbc5){
+                rebirthp -= rbc5
+                localStorage.setItem("rebirthp", rebirthp)
+                rbc5 *= 10
+                localStorage.setItem("rbc5", rbc5)
+                adjacent += 1
+                localStorage.setItem("adjacent", adjacent)
+                document.getElementById("rp").innerHTML = "rebirth points: " + rebirthp
+                document.getElementById("rbuy5").innerHTML = "cost:rebirth points  " + rbc5
+            }
+        break;
+
+    }
+
+}
