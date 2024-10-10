@@ -1,4 +1,4 @@
-function text(){
+function text() {
 
     document.getElementById("dirt").innerHTML = "dirt: " + dirt
     document.getElementById("copper").innerHTML = "copper: " + copper
@@ -30,13 +30,35 @@ function text(){
 }
 
 function setGround() {//start of setGround
+
+
     ground = [[], [], [], [], [], [], [], [], [], []]
-    val = [[1, 1, 1, 1, 1, 1, 2, 2, 2], [1, 1, 1, 1, 2, 2, 2, 3, 3], [1, 1, 2, 2, 2, 2, 2, 3, 3], [1, 1, 1, 2, 2, 2, 3, 3, 4], [1, 1, 2, 3, 3, 4, 4, 4, 5], [1, 2, 3, 3, 4, 4, 5, 5, 6], [2, 3, 3, 4, 4, 5, 5, 6, 7], [3, 3, 4, 4, 4, 5, 6, 7, 8]]
-    
+
     for (i = 0; i < 10; i++) {
         for (u = 0; u < 10; u++) {
-            ground[i][u] = val[Math.floor(Math.random() * (7 - 0 + 1) + 0)][Math.floor(Math.random() * (8 - 0 + 1) + 0)]
+
+            if (Math.floor(Math.random() * 10) < 8) {
+                ground[i][u] = 1
+            } else if (Math.floor(Math.random() * 10) < 6) {
+                ground[i][u] = 2
+            } else if (Math.floor(Math.random() * 10) < 6) {
+                ground[i][u] = 3
+            } else if (Math.floor(Math.random() * 10) < 6) {
+                ground[i][u] = 4
+            } else if (Math.floor(Math.random() * 10) < 6) {
+                ground[i][u] = 5
+            } else if (Math.floor(Math.random() * 10) < 6) {
+                ground[i][u] = 6
+            } else if (Math.floor(Math.random() * 10) < 7) {
+                ground[i][u] = 7
+            } else {
+                ground[i][u] = 8
+            }
+
+
         }
+
+
     }
 
     for (i = 0; i < 1000; i += 100) {
@@ -49,50 +71,50 @@ function setGround() {//start of setGround
             ctx.stroke();
             ctx.closePath()
         }
-    }
-}// end of setGround
+    }// end of setGround
+}
 
-function swap(val){
-    switch (val){
+function swap(val) {
+    switch (val) {
         case 1:
-            document.getElementById("shop").style.display='block'
-            document.getElementById("inventory").style.display='none'
-            document.getElementById("rebirth").style.display='none'
-            document.getElementById("mastery").style.display='none'
-            document.getElementById("settings").style.display='none'
-        break;
-        
+            document.getElementById("shop").style.display = 'block'
+            document.getElementById("inventory").style.display = 'none'
+            document.getElementById("rebirth").style.display = 'none'
+            document.getElementById("mastery").style.display = 'none'
+            document.getElementById("settings").style.display = 'none'
+            break;
+
         case 2:
-            document.getElementById("shop").style.display='none'
-            document.getElementById("inventory").style.display='block'
-            document.getElementById("rebirth").style.display='none'
-            document.getElementById("mastery").style.display='none'
-            document.getElementById("settings").style.display='none'
-        break;
+            document.getElementById("shop").style.display = 'none'
+            document.getElementById("inventory").style.display = 'block'
+            document.getElementById("rebirth").style.display = 'none'
+            document.getElementById("mastery").style.display = 'none'
+            document.getElementById("settings").style.display = 'none'
+            break;
 
         case 3:
-            document.getElementById("shop").style.display='none'
-            document.getElementById("inventory").style.display='none'
-            document.getElementById("rebirth").style.display='block'
-            document.getElementById("mastery").style.display='none'
-            document.getElementById("settings").style.display='none'
-        break;
+            document.getElementById("shop").style.display = 'none'
+            document.getElementById("inventory").style.display = 'none'
+            document.getElementById("rebirth").style.display = 'block'
+            document.getElementById("mastery").style.display = 'none'
+            document.getElementById("settings").style.display = 'none'
+            break;
 
         case 4:
-            document.getElementById("shop").style.display='none'
-            document.getElementById("inventory").style.display='none'
-            document.getElementById("rebirth").style.display='none'
-            document.getElementById("mastery").style.display='block'
-            document.getElementById("settings").style.display='none'
-        break;
+            document.getElementById("shop").style.display = 'none'
+            document.getElementById("inventory").style.display = 'none'
+            document.getElementById("rebirth").style.display = 'none'
+            document.getElementById("mastery").style.display = 'block'
+            document.getElementById("settings").style.display = 'none'
+            break;
 
         case 5:
-            document.getElementById("shop").style.display='none'
-            document.getElementById("inventory").style.display='none'
-            document.getElementById("rebirth").style.display='none'
-            document.getElementById("mastery").style.display='none'
-            document.getElementById("settings").style.display='block'
-        break;
+            document.getElementById("shop").style.display = 'none'
+            document.getElementById("inventory").style.display = 'none'
+            document.getElementById("rebirth").style.display = 'none'
+            document.getElementById("mastery").style.display = 'none'
+            document.getElementById("settings").style.display = 'block'
+            break;
 
 
     }

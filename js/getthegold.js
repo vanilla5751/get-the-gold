@@ -1,5 +1,6 @@
 var canvas
 var ctx
+var ran
 //ores
 var dirt = 0
 var copper = 0

@@ -1,19 +1,20 @@
+
+
 body {
     text-align: center;
+    
 }
 .flex-container {
     display: flex;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(30, 53, 160);
 }
 
 .flex-child {
     flex: 1;
-    border: 2px solid rgb(51, 3, 128);
     background-color: rgb(30, 53, 160);
-    width: 450px;
 }  
 
 .flex-child:first-child {
     margin-right: 20px;
-    background-color: blue;
+    background-color: rgb(30, 53, 160);
 } 
