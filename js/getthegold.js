@@ -1,9 +1,7 @@
 var canvas
 var ctx
 var ran
-var column
-var row
-//ores
+//ores 
 var dirt = 0
 var copper = 0
 var silver = 0
@@ -12,7 +10,7 @@ var diamond = 0
 var ruby = 0
 var emerald = 0
 var onyx = 0
-
+//rebirth ores
 var quartz = 0
 var titanium = 0
 var amythest = 0
@@ -22,6 +20,18 @@ var peridot = 0
 var uranium = 0
 var plutonium = 0
 var thorium = 0
+//prestige ores
+var amazonite = 0
+var opal = 0
+var krypton = 0
+var calcite = 0
+//sacrafice ores
+var technicium = 0
+var kryptonite = 0
+var sulfur = 0
+var painite = 0
+//other ores
+
 //upgrades
 var oremulti = 1
 var coremulti = 1
@@ -40,26 +50,13 @@ var upg5 = 5
 var upg6 = 5
 var upg7 = 10
 var upg8 = 1
-//rebirths
-var rebirthp = 0
-var rebirthpp = 0
-
-var oremulti2 = 1
-var newores = 0
-var unlocks = 0
-var auto = 0
-var adjacent = 0
-
-var rbc1 = 1
-var rbc2 = 10
-var rbc3 = 1000
-var rbc4 = 10
-var rbc5 = 100
+//reset layers
+var rebirthp
+var rebirthpp
 //levels
-var level
-var exp
-var expr
-var levelp
+var level = 1
+var exp = 0
+var expRequired = 250
 //mastery
 var dirtm = 1
 var copperm = 1 

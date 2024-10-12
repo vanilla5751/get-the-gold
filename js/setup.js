@@ -37,23 +37,27 @@ function setGround() {//start of setGround
     for (i = 0; i < 10; i++) {
         for (u = 0; u < 10; u++) {
 
-            if (Math.floor(Math.random() * 10) < 8) {
+
+            let rand = Math.random() * 100; // Generate a random number between 0 and 100
+
+            if (rand < 40) { // 40% chance for Dirt
                 ground[i][u] = 1
-            } else if (Math.floor(Math.random() * 10) < 6) {
+            } else if (rand < 70) { // 30% chance for Copper (40% + 30%)
                 ground[i][u] = 2
-            } else if (Math.floor(Math.random() * 10) < 6) {
+            } else if (rand < 85) { // 15% chance for Silver (70% + 15%)
                 ground[i][u] = 3
-            } else if (Math.floor(Math.random() * 10) < 6) {
+            } else if (rand < 93) { // 8% chance for Gold (85% + 8%)
                 ground[i][u] = 4
-            } else if (Math.floor(Math.random() * 10) < 6) {
+            } else if (rand < 97) { // 4% chance for Diamond (93% + 4%)
                 ground[i][u] = 5
-            } else if (Math.floor(Math.random() * 10) < 6) {
+            } else if (rand < 98.5) { // 1.5% chance for Ruby (97% + 1.5%)
                 ground[i][u] = 6
-            } else if (Math.floor(Math.random() * 10) < 7) {
+            } else if (rand < 99.5) { // 1% chance for Emerald (98.5% + 1%)
                 ground[i][u] = 7
-            } else {
+            } else { // Remaining 0.5% chance for Onyx
                 ground[i][u] = 8
             }
+
 
 
         }
@@ -82,6 +86,7 @@ function swap(val) {
             document.getElementById("rebirth").style.display = 'none'
             document.getElementById("mastery").style.display = 'none'
             document.getElementById("settings").style.display = 'none'
+            document.getElementById("level").style.display = 'none'
             break;
 
         case 2:
@@ -90,6 +95,7 @@ function swap(val) {
             document.getElementById("rebirth").style.display = 'none'
             document.getElementById("mastery").style.display = 'none'
             document.getElementById("settings").style.display = 'none'
+            document.getElementById("level").style.display = 'none'
             break;
 
         case 3:
@@ -98,6 +104,7 @@ function swap(val) {
             document.getElementById("rebirth").style.display = 'block'
             document.getElementById("mastery").style.display = 'none'
             document.getElementById("settings").style.display = 'none'
+            document.getElementById("level").style.display = 'none'
             break;
 
         case 4:
@@ -106,6 +113,7 @@ function swap(val) {
             document.getElementById("rebirth").style.display = 'none'
             document.getElementById("mastery").style.display = 'block'
             document.getElementById("settings").style.display = 'none'
+            document.getElementById("level").style.display = 'none'
             break;
 
         case 5:
@@ -114,6 +122,16 @@ function swap(val) {
             document.getElementById("rebirth").style.display = 'none'
             document.getElementById("mastery").style.display = 'none'
             document.getElementById("settings").style.display = 'block'
+            document.getElementById("level").style.display = 'none'
+            break;
+
+        case 6:
+            document.getElementById("shop").style.display = 'none'
+            document.getElementById("inventory").style.display = 'none'
+            document.getElementById("rebirth").style.display = 'none'
+            document.getElementById("mastery").style.display = 'none'
+            document.getElementById("settings").style.display = 'none'
+            document.getElementById("level").style.display = 'block'
             break;
 
 

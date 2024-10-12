@@ -14,8 +14,8 @@
   <script type="text/javascript" src="js/setup.js"></script>
   <script type="text/javascript" src="js/mastery.js"></script>
   <script type="text/javascript" src="js/reset.js"></script>
+  <script type="text/javascript" src="js/leveling.js"></script>
   <script type="text/javascript" src="js/rebirth.js"></script>
-  <script type="text/javascript" src="js/adjacent.js"></script>
   <link href="getthegold.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -32,6 +32,7 @@
       <button onclick="swap(3)">REBIRTH</button>
       <button onclick="swap(4)">MASTERY</button>
       <button onclick="swap(5)">SETTINGS</button>
+      <button onclick="swap(6)">LEVELS</button>
 
       <div id="shop" style="display: block;">
         <h1><b>SHOP</b></h1>
@@ -73,19 +74,19 @@
         <h1><b>REBIRTH SHOP</b></h1>
 
         <button onclick="rbuy(1)">ore multiplier</button>
-        <p id="rbuy1">cost:1 rebirth point</p>
+        <p id="buy1">cost:1 rebirth point</p>
 
         <button onclick="rbuy(2)">new ore</button>
-        <p id="rbuy2">cost:10 rebirth point</p>
+        <p id="buy1">cost:10 rebirth point</p>
 
         <button onclick="rbuy(3)">unlock: farm</button>
-        <p id="rbuy3">cost:1000 rebirth point</p>
+        <p id="buy1">cost:1000 rebirth point</p>
 
         <button onclick="rbuy(4)">auto mine ore</button>
-        <p id="rbuy4">cost:10 rebirth point</p>
+        <p id="buy1">cost:10 rebirth point</p>
 
         <button onclick="rbuy(5)">mine adjacent ores chance</button>
-        <p id="rbuy5">cost:100 rebirth point</p>
+        <p id="buy1">cost:100 rebirth point</p>
         
       </div>
 
@@ -126,6 +127,12 @@
 
       </div>
 
+      <div id="level" style="display: none;">
+        <h1><b>LEVEL</b></h1>
+        <p id="lv">Level: 1 (XP: 0/250)</p>
+      </div>
+      
+
       <div id="inventory" style="display: none;">
         <h1><b>INVENTORY</b></h1>
         <p id="dirt"> dirt: 0</p>
@@ -150,6 +157,21 @@
         <br>
         <h2>RESET POINTS</h2>
         <p id="rp"> rebirth points: 0</p>
+        <p id="rp"> prestige points: 0</p>
+        <p id="rp"> sacrafice points: 0</p>
+        <br>
+        <h2>PRESTIGE ORES</h2>
+        <p id="quartz"> amazonite: 0</p>
+        <p id="titanium"> opal: 0</p>
+        <p id="amythest"> krypton: 0</p>
+        <p id="sapphire"> calcite: 0</p>
+        <br>
+        <h2>sacrafice ORES</h2>
+        <p id="technicium"> technicium: 0</p>
+        <p id="kryptonite"> kryptonite: 0</p>
+        <p id="sulfur"> sulfur: 0</p>
+        <p id="painite"> painite: 0</p>
+
 
       </div>
 

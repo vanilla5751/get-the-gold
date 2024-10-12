@@ -2,102 +2,93 @@ function canvasClicked() {
 
     var clickX = event.x;
     var clickY = event.y;
-
+    
     clickX -= canvas.offsetLeft;
     clickY -= canvas.offsetTop;
-
+    
     clickX += window.pageXOffset
     clickY += window.pageYOffset;
+   
 
-
-
+    
     row = Math.floor(clickX / 100)
     column = Math.floor(clickY / 100)
-
+    
     switch (ground[row][column]) {
         case 1:
-            console.log("you found dirt")
-            ground[row][column] = 110
-            found("#4f351f", row, column)
-            dirt += (Math.pow(1 + orebase, pow)) * oremulti * coremulti * dmult * dirtm * oremulti2
-            document.getElementById("dirt").innerHTML = "dirt:" + dirt
-            localStorage.setItem("dirt", dirt)
-
-            if (adjacent < 1) {
-                bound = Math.round(1000 / adjacent) + 1
-                if (Math.round((Math.random() * bound)) == 1) {
-                    adjacent(1, 0)
-                }
-                if (Math.round((Math.random() * bound)) == 1) {
-                    adjacent(-1, 0)
-                }
-                if (Math.round((Math.random() * bound)) == 1) {
-                    adjacent(0, 1)
-                }
-                if (Math.round((Math.random() * bound)) == 1) {
-
-                }
-            }
-
+            console.log("you found dirt");
+            ground[row][column] = 110;
+            found("#4f351f", row, column);
+            dirt += (Math.pow(1 + orebase, pow)) * oremulti * coremulti * dmult * dirtm * level
+            localStorage.setItem("dirt", dirt);
+            document.getElementById("dirt").innerHTML = "dirt: " + dirt
+            addExperience(0.25);
             break;
         case 2:
-            console.log("you found copper")
-            ground[row][column] = 120
-            found("#b77438", row, column)
-            copper += (Math.pow(1 + orebase, pow)) * oremulti * coremulti * copperm * oremulti2
-            document.getElementById("copper").innerHTML = "copper:" + copper
-            localStorage.setItem("copper", copper)
+            console.log("you found copper");
+            ground[row][column] = 120;
+            found("#b77438", row, column);
+            copper += (Math.pow(1 + orebase, pow)) * oremulti * coremulti * copperm * level
+            localStorage.setItem("copper", copper);
+            document.getElementById("copper").innerHTML = "copper: " + copper
+            addExperience(0.5);
             break;
         case 3:
-            console.log("you found silver")
-            ground[row][column] = 130
-            found("#a59b91", row, column)
-            silver += (Math.pow(1 + orebase, pow)) * oremulti * coremulti * silverm * oremulti2
-            document.getElementById("silver").innerHTML = "silver:" + silver
-            localStorage.setItem("silver", silver)
+            console.log("you found silver");
+            ground[row][column] = 130;
+            found("#a59b91", row, column);
+            silver += (Math.pow(1 + orebase, pow)) * oremulti * coremulti * silverm * level
+            localStorage.setItem("silver", silver);
+            document.getElementById("silver").innerHTML = "silver: " + silver
+            addExperience(1); 
             break;
         case 4:
-            console.log("you found gold")
-            ground[row][column] = 140
-            found("#937f0a", row, column)
-            gold += (Math.pow(1 + orebase, pow)) * oremulti * coremulti * gmulti * goldm * oremulti2
-            document.getElementById("gold").innerHTML = "gold:" + gold
-            localStorage.setItem("gold", gold)
+            console.log("you found gold");
+            ground[row][column] = 140;
+            found("#937f0a", row, column);
+            gold += (Math.pow(1 + orebase, pow)) * oremulti * coremulti * gmulti * goldm * level
+            localStorage.setItem("gold", gold);
+            document.getElementById("gold").innerHTML = "gold: " + gold
+            addExperience(2);
             break;
         case 5:
-            console.log("you found diamond")
-            ground[row][column] = 150
-            found("#136d5d", row, column)
-            diamond += (Math.pow(1 + orebase, pow)) * oremulti * roremulti * diamondm * oremulti2
-            document.getElementById("diamond").innerHTML = "diamond:" + diamond
-            localStorage.setItem("diamond", diamond)
+            console.log("you found diamond");
+            ground[row][column] = 150;
+            found("#136d5d", row, column);
+            diamond += (Math.pow(1 + orebase, pow)) * oremulti * roremulti * diamondm * level
+            localStorage.setItem("diamond", diamond);
+            document.getElementById("diamond").innerHTML = "diamond: " + diamond
+            addExperience(4); 
             break;
         case 6:
-            console.log("you found ruby")
-            ground[row][column] = 160
-            found("#E24517", row, column)
-            ruby += (Math.pow(1 + orebase, pow)) * oremulti * roremulti * rubym * oremulti2
-            document.getElementById("ruby").innerHTML = "ruby:" + ruby
-            localStorage.setItem("ruby", ruby)
+            console.log("you found ruby");
+            ground[row][column] = 160;
+            found("#E24517", row, column);
+            ruby += (Math.pow(1 + orebase, pow)) * oremulti * roremulti * rubym * level
+            localStorage.setItem("ruby", ruby);
+            document.getElementById("ruby").innerHTML = "ruby: " + ruby
+            addExperience(8); 
             break;
         case 7:
-            console.log("you found emerald")
-            ground[row][column] = 170
-            found("#22E217", row, column)
-            emerald += (Math.pow(1 + orebase, pow)) * oremulti * roremulti * emeraldm * oremulti2
-            document.getElementById("emerald").innerHTML = "emerald:" + emerald
-            localStorage.setItem("emerald", emerald)
+            console.log("you found emerald");
+            ground[row][column] = 170;
+            found("#22E217", row, column);
+            emerald += (Math.pow(1 + orebase, pow)) * oremulti * roremulti * emeraldm * level
+            localStorage.setItem("emerald", emerald);
+            document.getElementById("emerald").innerHTML = "emerald: " + emerald
+            addExperience(16); 
             break;
         case 8:
-            console.log("you found onyx")
-            ground[row][column] = 180
-            found("#171817", row, column)
-            onyx += (Math.pow(1 + orebase, pow)) * oremulti * roremulti * onyxm * oremulti2
-            document.getElementById("onyx").innerHTML = "onyx:" + onyx
-            localStorage.setItem("onyx", onyx)
-            rebirthpp = Math.log10(onyx)
-            document.getElementById("rb").innerHTML = "rebirth for: " + rebirthpp + " rebirth points"
-            localStorage.setItem("rebirthpp", rebirthpp)
+            console.log("you found onyx");
+            ground[row][column] = 180;
+            found("#171817", row, column);
+            onyx += (Math.pow(1 + orebase, pow)) * oremulti * roremulti * onyxm * level
+            localStorage.setItem("onyx", onyx);
+            document.getElementById("onyx").innerHTML = "onyx: " + onyx
+            rebirthpp = Math.log10(onyx);
+            localStorage.setItem("rebirthpp", rebirthpp);
+            document.getElementById("rb").innerHTML = "rebirth for: " + rebirthpp + " rebirth points";
+            addExperience(32); 
             break;
         default:
             let sum = 0
@@ -115,10 +106,6 @@ function canvasClicked() {
 
     }
 
-
-
-
-
 }
 
 function found(color, row, column) {
@@ -130,4 +117,3 @@ function found(color, row, column) {
     ctx.stroke();
     ctx.closePath()
 }
-

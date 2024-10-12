@@ -253,65 +253,22 @@ function getdata() {
         rebirthpp = parseInt(localStorage.getItem("rebirthpp"))
     }
 
-    if (localStorage.getItem("oremulti2") == null) {
-        localStorage.setItem("oremulti2", oremulti2)
+    if (localStorage.getItem("level") == null) {
+        localStorage.setItem("level", level)
     } else {
-        oremulti2 = parseInt(localStorage.getItem("rebirthpp"))
+        level = parseInt(localStorage.getItem("level"))
     }
 
-    if (localStorage.getItem("newores") == null) {
-        localStorage.setItem("newores", newores)
+    if (localStorage.getItem("exp") == null) {
+        localStorage.setItem("exp", exp)
     } else {
-        newores = parseInt(localStorage.getItem("newores"))
+        exp = parseInt(localStorage.getItem("exp"))
     }
 
-    if (localStorage.getItem("unlocks") == null) {
-        localStorage.setItem("unlocks", unlocks)
+    if (localStorage.getItem("expRequired") == null) {
+        localStorage.setItem("expRequired", expRequired)
     } else {
-        unlocks = parseInt(localStorage.getItem("unlocks"))
-    }
-
-    if (localStorage.getItem("auto") == null) {
-        localStorage.setItem("auto", auto)
-    } else {
-        auto = parseInt(localStorage.getItem("auto"))
-    }
-
-    if (localStorage.getItem("adjacent") == null) {
-        localStorage.setItem("adjacent", adjacent)
-    } else {
-        adjacent = parseInt(localStorage.getItem("adjacent"))
-    }
-
-    if (localStorage.getItem("rbc1") == null) {
-        localStorage.setItem("rbc1", rbc1)
-    } else {
-        rbc1 = parseInt(localStorage.getItem("rbc1"))
-    }
-
-    if (localStorage.getItem("rbc2") == null) {
-        localStorage.setItem("rbc2", rbc2)
-    } else {
-        rbc2 = parseInt(localStorage.getItem("rbc2"))
-    }
-
-    if (localStorage.getItem("rbc3") == null) {
-        localStorage.setItem("rbc3", rbc3)
-    } else {
-        rbc3 = parseInt(localStorage.getItem("rbc3"))
-    }
-
-    
-    if (localStorage.getItem("rbc4") == null) {
-        localStorage.setItem("rbc4", rbc4)
-    } else {
-        rbc4 = parseInt(localStorage.getItem("rbc4"))
-    }
-
-    if (localStorage.getItem("rbc5") == null) {
-        localStorage.setItem("rbc5", rbc5)
-    } else {
-        rbc5 = parseInt(localStorage.getItem("rbc5"))
+        expRequired = parseInt(localStorage.getItem("expRequired"))
     }
 
 
