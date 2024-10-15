@@ -27,6 +27,8 @@ function text() {
     document.getElementById("m7").innerHTML = "cost:emerald " + emeraldmc
     document.getElementById("m8").innerHTML = "cost:onyx " + onyxmc
 
+    document.getElementById("lv").innerHTML = "Level: " + level + " (XP: " + exp + "/" + expRequired + ")"
+
 }
 
 function setGround() {//start of setGround

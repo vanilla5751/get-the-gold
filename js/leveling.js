@@ -1,7 +1,7 @@
 
 
 function addExperience(points) {
-    exp += points
+    exp += Math.pow(points + expb,exppow) * expmulti
     localStorage.setItem("exp", exp);
     while (exp >= expRequired) {
         exp -= expRequired

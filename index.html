@@ -33,6 +33,8 @@
       <button onclick="swap(4)">MASTERY</button>
       <button onclick="swap(5)">SETTINGS</button>
       <button onclick="swap(6)">LEVELS</button>
+      <button onclick="swap(7)">ZONES(wip)</button>
+      <button onclick="swap(8)">POWER(wip)</button>
 
       <div id="shop" style="display: block;">
         <h1><b>SHOP</b></h1>
@@ -74,19 +76,19 @@
         <h1><b>REBIRTH SHOP</b></h1>
 
         <button onclick="rbuy(1)">ore multiplier</button>
-        <p id="buy1">cost:1 rebirth point</p>
+        <p id="buy1">cost:1 rebirth point(wip)</p>
 
         <button onclick="rbuy(2)">new ore</button>
-        <p id="buy1">cost:10 rebirth point</p>
+        <p id="buy1">cost:10 rebirth point(wip)</p>
 
         <button onclick="rbuy(3)">unlock: farm</button>
-        <p id="buy1">cost:1000 rebirth point</p>
+        <p id="buy1">cost:1000 rebirth point(wip)</p>
 
         <button onclick="rbuy(4)">auto mine ore</button>
-        <p id="buy1">cost:10 rebirth point</p>
+        <p id="buy1">cost:10 rebirth point(wip)</p>
 
         <button onclick="rbuy(5)">mine adjacent ores chance</button>
-        <p id="buy1">cost:100 rebirth point</p>
+        <p id="buy1">cost:100 rebirth point(wip)</p>
         
       </div>
 
@@ -123,13 +125,29 @@
 
         <button onclick="reset()">reset data</button>
 
-        <button>export data as json (wip)</button>
+        <button onclick="exportdata()">export data as json</button><br>
+
+        <label for="importDataInput">Import Data:</label>
+        <input type="file" id="importDataInput" accept=".json" onchange="importData(event)">
 
       </div>
 
       <div id="level" style="display: none;">
         <h1><b>LEVEL</b></h1>
         <p id="lv">Level: 1 (XP: 0/250)</p>
+
+        <h1><b>LEVEL UPGRADES</b></h1>
+        <p id="l1">cost:3 levels(wip)</p>
+        <button onclick="lv(1)">increase base exp</button>
+
+        <p id="l2">cost:10 levels(wip)</p>
+        <button onclick="lv(2)">multiply exp</button>
+
+        <p id="l3">cost:25 levels(wip)</p>
+        <button onclick="lv(3)">increase exp power</button>
+
+        <p id="l4">cost:15 levels(wip)</p>
+        <button onclick="lv(4)">decrease required exp</button>
       </div>
       
 

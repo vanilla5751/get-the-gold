@@ -57,6 +57,16 @@ var rebirthpp
 var level = 1
 var exp = 0
 var expRequired = 250
+//level upgrade costs
+var lv1 = 3;
+var lv2 = 10;
+var lv3 = 25;
+var lv4 = 15;
+//level upgrades
+var expb = 0;
+var exppow = 1;
+var expmulti = 1;
+var expreq = 1;
 //mastery
 var dirtm = 1
 var copperm = 1 

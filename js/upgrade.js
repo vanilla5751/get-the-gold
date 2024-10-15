@@ -109,3 +109,62 @@ function buy(upg) {
             break;
     }
 }
+
+function lv(val){
+    switch (val) {
+        case 1:
+            if (level >= lv1) {
+                level = 0
+                document.getElementById("lv").innerHTML = "Level: 1 (XP: 0/250)"
+                expb += 1
+                localStorage.setItem("oremulti", oremulti)
+                upg1 = Math.round((upg1 * costMultipliers[0]) / Math.log10(reroll + 1))
+                localStorage.setItem("upg1", upg1)
+                document.getElementById("buy1").innerHTML = "cost:dirt " + upg1
+                localStorage.setItem("dirt", dirt)
+            }
+            break;
+
+        case 2:
+            if (level >= lv2) {
+                level = 0
+                document.getElementById("lv").innerHTML = "Level: 1 (XP: 0/250)"
+                expmulti += 1
+                localStorage.setItem("coremulti", coremulti)
+                upg2 = Math.round((upg2 * costMultipliers[1]) / Math.log10(reroll + 1))
+                localStorage.setItem("upg2", upg2)
+                document.getElementById("buy2").innerHTML = "cost:copper " + upg2
+                localStorage.setItem("copper", copper)
+            }
+            break;
+
+        case 3:
+            if (level >= lv3) {
+                level = 0
+                document.getElementById("lv").innerHTML = "Level: 1 (XP: 0/250)"
+                exppow += 1
+                localStorage.setItem("roremulti", roremulti)
+                upg3 = Math.round((upg3 * costMultipliers[2]) / Math.log10(reroll + 1))
+                localStorage.setItem("upg3", upg3)
+                document.getElementById("buy3").innerHTML = "cost:silver " + upg3
+                localStorage.setItem("silver", silver)
+            }
+            break;
+
+        case 4:
+            if (level >= lv4) {
+                level = 0
+                document.getElementById("lv").innerHTML = "Level: 1 (XP: 0/250)"
+                expreq += 1
+                localStorage.setItem("orebase", orebase)
+                upg4 = Math.round((upg4 * costMultipliers[3]) / Math.log10(reroll + 1))
+                localStorage.setItem("upg4", upg4)
+                document.getElementById("buy4").innerHTML = "cost:gold " + upg4
+                localStorage.setItem("gold", gold)
+            }
+            break;
+        }
+
+
+
+}
