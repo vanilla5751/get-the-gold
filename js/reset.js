@@ -226,3 +226,23 @@ function softreset1(){
     document.getElementById("m8").innerHTML = "cost:onyx " + onyxmc
 
 }
+
+function softreset2(){
+
+}
+
+function softreset3(){
+
+}
+
+function softreset4(){
+
+}
+
+function softreset5(){
+
+}
+
+function softreset6(){
+
+}
